@@ -5,7 +5,7 @@ on:
     inputs:
       spec:
         description: Run by cypress command line
-        default: cypress/e2e/**
+        default: cypress/e2e/*
         
 jobs:
       cypress-electron-tests:
@@ -24,4 +24,4 @@ jobs:
               spec: ${{ github.event.inputs.spec }}
             env:
               CYPRESS_RECORD_KEY: bbca5833-8ce6-4420-801a-756b93cfbdd7
-              GITHUB_TOKEN: ${{ secrets_GITHUB_TOKEN }}
+              GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
